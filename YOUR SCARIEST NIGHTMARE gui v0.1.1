@@ -1,8 +1,10 @@
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/GreenDeno/Venyx-UI-Library/main/source.lua"))()
-local gui = library.new("YOUR SCARIEST NIGHTMARE v0.1.1")
+local gui = library.new("YOUR SCARIEST NIGHTMARE v0.1.2")
 
 local events = game:GetService("ReplicatedStorage"):WaitForChild("Remotes").Events
 local mID
+local dddamage = 10
+local ttttype = "Normal"
 
 local p1 = gui:addPage("main")
 local p2 = gui:addPage("scripts")
@@ -68,6 +70,56 @@ s5:addButton("Fatal Error Sans menu script", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/GgzRb0pu", true))()
     gui:Notify("WARNING", "custom character is loaded")
      
+end)
+
+s5:addButton("lopviii's godmode MENU", function()
+    
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/IVXERROR/my-scripts/main/lopviii%27s%20godmode", true))()
+    gui:Notify("WARNING", "custom character is loaded | creator: lopviii#9967")
+     
+end)
+
+local s6 = p3:addSection("damage module")
+
+s6:addDropdown("types", {"Normal", "Knockback"}, function(value)
+    
+    print(value)
+    ttttype = value
+    
+end)
+
+s6:addSlider("damage", 10, 0, 40, function(value)
+    
+    print(value)
+    dddamage = value
+    
+end)
+
+s6:addKeybind("bind", Enum.KeyCode.T, function()
+    
+    local Anim = Instance.new("Animation")
+Anim.AnimationId = "rbxassetid://4906092495"
+local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
+k:Play()
+
+local args = { 
+[1] = getrenv()._G.Pass,
+[2] = game.Players.LocalPlayer.Backpack.Main.LockOnScript.LockOn.Value,
+[3] = {
+    ["Type"] = ttttype,
+    ["HitEffect"] = "CarrotHitEffect",
+    ["HurtAnimation"] = game:GetService("ReplicatedStorage").Animations.HurtAnimations.GroundHurt,
+    ["Velocity"] = Vector3.new(0, -0.1, 0),
+    ["HitTime"] = 1,
+    ["CombatInv"] = true,
+    ["Sound"] = game:GetService("ReplicatedStorage").Sounds.GroundHit,
+    ["Damage"] = dddamage
+}
+}
+ 
+local Event = game:GetService("ReplicatedStorage").Remotes.Damage
+Event:InvokeServer(unpack(args))
+    
 end)
 
 local s10 = p4:addSection("custom music")
