@@ -1,0 +1,97 @@
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/GreenDeno/Venyx-UI-Library/main/source.lua"))()
+local gui = library.new("YOUR SCARIEST NIGHTMARE v0.1")
+
+local events = game:GetService("ReplicatedStorage"):WaitForChild("Remotes").Events
+local mID
+
+local p1 = gui:addPage("main")
+local p2 = gui:addPage("scripts")
+local p3 = gui:addPage("damage")
+local p4 = gui:addPage("others")
+
+local s1 = p1:addSection("creator: just a tree#0556")
+local s2 = p1:addSection("support: lopviii#9967")
+local s3 = p1:addSection("phases:")
+
+s3:addButton("main phases", function()
+    gui:Notify("WARNING", "the script is not ready yet")
+end)
+s3:addButton("phase 3", function()
+    gui:Notify("WARNING", "the script is not ready yet")
+end)
+s3:addButton("phase 4", function()
+    gui:Notify("WARNING", "the script is not ready yet")
+end)
+s3:addButton("phase 5", function()
+    gui:Notify("WARNING", "the script is not ready yet")
+end)
+
+local s4 = p2:addSection("my scripts")
+local s5 = p2:addSection("other scripts")
+
+s4:addButton("[[SPAMTON NEO]] MENU (patched)", function()
+    
+    loadstring(game:HttpGet("https://pastebin.com/raw/WyTV4iBC", true))()
+    gui:Notify("WARNING", "custom character is loaded")
+     
+end)
+
+s4:addButton("Jeff The Killer MENU (not ready)", function()
+      
+    gui:Notify("WARNING", "custom character is not ready")
+     
+end)
+
+s5:addButton("Project 1 MENU", function()
+    
+    loadstring(game:HttpGet("https://pastebin.com/raw/HNweMeQi", true))()
+    gui:Notify("WARNING", "custom character is loaded")
+     
+end)
+
+s5:addButton("Real!Sans MENU", function()
+    
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/IVXERROR/my-library/main/whitelist", true))()
+    gui:Notify("WARNING", "custom character is loaded")
+     
+end)
+
+s5:addButton("GTCR v3 MENU", function()
+    
+    loadstring(game:HttpGet("https://pastebin.com/raw/75hgtyUQ", true))()
+    gui:Notify("WARNING", "custom character is loaded")
+     
+end)
+
+s5:addButton("Fatal Error Sans menu script", function()
+    
+    loadstring(game:HttpGet("https://pastebin.com/raw/GgzRb0pu", true))()
+    gui:Notify("WARNING", "custom character is loaded")
+     
+end)
+
+local s10 = p4:addSection("custom music")
+
+s10:addTextbox("music ID", "id goes here", function(value, focusLost)
+    
+if focusLost then
+    
+    print(value)
+    mID = value
+    
+    end
+
+end)
+
+s10:addButton("play music", function()
+    
+for _, v in pairs(game.Players.LocalPlayer:WaitForChild("StarterPlaylist"):GetChildren()) do
+v:Destroy()
+end
+local music = Instance.new("Sound",game.Players.LocalPlayer:WaitForChild("StarterPlaylist"))
+music.Volume = 2
+music.SoundId = "rbxassetid://"..mID
+music.Looped = true
+music:Play()
+    
+end)
