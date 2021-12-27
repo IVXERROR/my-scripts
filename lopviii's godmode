@@ -16,3 +16,9 @@ game.Players.LocalPlayer.Character.Humanoid:GetPropertyChangedSignal("Health"):C
     game.Players.LocalPlayer.Character.Humanoid.Health = 1
     end
 end)
+
+game.StarterGui:SetCore("SendNotification", {
+		Title = "lopviii's godmode";
+		Text = "made by lopviii#9967";
+		Duration = 5;
+	})
