@@ -1,4 +1,5 @@
 game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Chat, true)
+game.ReplicatedStorage.Remotes.Functions:InvokeServer({getrenv()._G.Pass,"ChangeSetting","MorphEnabled",true})
 game.Players.LocalPlayer.PlayerGui.CharacterSelection.Character.Value = "Chara"
 wait(1)
 game.Players.LocalPlayer.Character.Head:WaitForChild("HealthBar"):Destroy()
@@ -22,3 +23,4 @@ game.StarterGui:SetCore("SendNotification", {
 		Text = "made by lopviii#9967";
 		Duration = 5;
 	})
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:Destroy()
