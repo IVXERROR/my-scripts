@@ -164,3 +164,11 @@ s9:addButton("leave", function()
     game.Players.LocalPlayer:Kick("the leave button is pressed")
     
 end)
+
+local s10 = p4:addSection("ui toggle keybind")
+
+s10:addKeybind("ui toggle", Enum.KeyCode.Semicolon, function()
+    
+    gui:toggle()
+    
+end)
