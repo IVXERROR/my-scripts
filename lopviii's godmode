@@ -1,3 +1,8 @@
+local pass = getrenv()._G.Pass
+local player = game.Players.LocalPlayer
+local character = player.Character
+local uis = game:GetService("UserInputService")
+
 game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Chat, true)
 game.ReplicatedStorage.Remotes.Functions:InvokeServer({getrenv()._G.Pass,"ChangeSetting","MorphEnabled",true})
 game.Players.LocalPlayer.PlayerGui.CharacterSelection.Character.Value = "Chara"
