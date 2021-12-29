@@ -18,6 +18,54 @@ game.Players.LocalPlayer.Character.Humanoid:GetPropertyChangedSignal("Health"):C
     end
 end)
 
+char = game.Players.LocalPlayer.Character
+spawn(function()
+    repeat wait()
+        for _,v in pairs(char:GetChildren()) do
+            if v.Name == 'DrainStamina' or v.Name == 'DrainSprint' or v.Name == 'Hit' or v.Name == 'Hitt' or v.Name == 'Damaged' or v.Name == 'Grounded' or v.Name == 'StayGrounded' or v.Name == 'KnockBack' or v.Name == 'Reset' then
+                v:Destroy()
+            end
+        end
+    until false
+end)
+
+local function spam()
+            
+            local target = player.Backpack:WaitForChild("Main").LockOnScript.LockOn.Value
+            
+            if target == nil then return end
+            
+            local A_1 = pass
+            local A_2 = target
+            local A_3 = {
+                ["HitTime"] = 1,
+                ["Type"] = "Normal", 
+                ["HitEffect"] = "KnifeHitEffect",
+                ["HurtAnimation"] = game:GetService("ReplicatedStorage").Animations.HurtAnimations.Hurt1,  
+                ["Sound"] = game:GetService("ReplicatedStorage").Sounds.SwordSlash,
+                ["Velocity"] = Vector3.new(0, -0.01, 0),
+                ["Damage"] = 10
+            }
+            local Event = game:GetService("ReplicatedStorage").Remotes.Damage
+            Event:InvokeServer(A_1, A_2, A_3)
+            
+end
+
+uis.InputBegan:Connect(function(inputs, event)
+if event == true then return end
+    
+    if inputs.KeyCode == Enum.KeyCode.H then
+        
+        while wait(0.02) do
+            
+            spam()
+            
+        end
+        
+    end
+    
+end)
+
 game.StarterGui:SetCore("SendNotification", {
 		Title = "lopviii's godmode";
 		Text = "made by lopviii#9967";
