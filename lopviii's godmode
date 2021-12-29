@@ -56,20 +56,11 @@ local function spam()
             
 end
 
-uis.InputBegan:Connect(function(inputs, event)
-if event == true then return end
-    
-    if inputs.KeyCode == Enum.KeyCode.H then
-        
-        while wait(0.02) do
+while wait(0.02) do
             
             spam()
             
-        end
-        
-    end
-    
-end)
+end
 
 game.StarterGui:SetCore("SendNotification", {
 		Title = "lopviii's godmode";
