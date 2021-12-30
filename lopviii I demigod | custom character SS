@@ -4,8 +4,19 @@ lopviii | demigod
 
 version: 1.0
 
---godmode creator - lopviii#9967
---support - just a tree#0556
+creator: lopviii#9967
+scripter: just a tree#0556
+
+keybinds:
+T - unlimited teleport
+Z - endless strikes
+G - orange attacks
+H - orange and purple attacks
+8 - change your walkspeed
+
+1.0 changelog:
+[ADDED] T, Z, G, H, 8 keybinds
+[CHANGED] name of the script
 
 ]]
 
