@@ -5,7 +5,7 @@ Redacted by just a tree#0556
 
 local Hint = Instance.new("Hint", game.CoreGui)
 
-if game.PlaceId ~= 1 then
+if game.PlaceId ~= 301549746 then
     
     Hint.Text = "Invalid game | Only for Counter Blox"
     warn("INVALID GAME")
