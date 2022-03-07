@@ -2220,7 +2220,7 @@ local queueteleport = syn and syn.queue_on_teleport or queue_on_teleport or flux
 
 game:GetService("Players").LocalPlayer.OnTeleport:Connect(function(State)
     if State == Enum.TeleportState.Started then
-        queueteleport("")
+        queueteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/IVXERROR/my-scripts/main/Hexagon%20REDACTED', true))()")
     end
 end)
 
