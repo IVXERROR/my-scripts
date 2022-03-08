@@ -15,6 +15,18 @@ if game.PlaceId ~= 301549746 then
     
 end
 
+if HEX == true then
+    
+    Hint.Text = "Already loaded"
+    warn("ALREADY LOADED")
+    wait(3)
+    Hint:Destroy()
+    return
+    
+end
+
+pcall(function() getgenv().HEX = true end)
+
 Hint.Text = "Hexagon | Waiting for the game to load..."
 
 repeat wait() until game:IsLoaded()
