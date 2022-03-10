@@ -2182,14 +2182,6 @@ oldIndex = hookfunc(getrawmetatable(game.Players.LocalPlayer.PlayerGui.Client)._
     return oldIndex(self, idx)
 end))
 
-getsenv(game.Players.LocalPlayer.PlayerGui.GUI.Main.Chats.DisplayChat).createNewMessage = function(plr, msg, teamcolor, msgcolor, offset, line)
-	if library.pointers.MiscellaneousTabCategoryMainNNSDontTalk.value == true and plr ~= game.Players.LocalPlayer.Name then
-		msg = "I am retarded."
-	end
-	
-	return createNewMessage(plr, msg, teamcolor, msgcolor, offset, line)
-end
-
 CharacterAdded()
 
 table.foreach(game.Players:GetPlayers(), PlayerAdded)
