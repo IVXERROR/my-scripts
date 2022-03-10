@@ -1667,6 +1667,8 @@ SettingsTabCategoryCredits:AddLabel("Script - Pawel12d#0272")
 
 SettingsTabCategoryCredits:AddLabel("ESP - Modified Kiriot ESP")
 
+SettingsTabCategoryCredits:AddLabel("Redacted version - just a tree#0556")
+
 SettingsTabCategoryCredits:AddLabel("UI Library - Modified Phantom Ware")
 
 SettingsTabCategoryCredits:AddLabel("")
