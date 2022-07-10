@@ -2,7 +2,7 @@
 
 --version
 
-local version = "0.2.0 ALPHA"
+local version = "0.1.0 ALPHA"
 
 --main script
 
